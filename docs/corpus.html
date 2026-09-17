@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8"><title>the collaborator corpus</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+:root{--ink:#e9e4d8;--dim:#8d99a8;--bg:#0b0e13;--pan:#11161e;--line:#222c38;--hot:#c9a45c;--ok:#57c8a0;--ne:#c2803c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 ui-monospace,Menlo,Consolas,monospace}
+.wrap{max-width:70rem;margin:0 auto;padding:2rem 1.1rem 5rem}
+h1{font-size:1.7rem;letter-spacing:.04em;margin:0 0 .2rem}
+h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;color:var(--hot);font-weight:400;margin:2.4rem 0 .6rem;border-bottom:1px solid var(--line);padding-bottom:.4rem}
+p{max-width:52rem}.dim{color:var(--dim)}.ne{color:var(--ne)}
+nav a{color:var(--hot);text-decoration:none;margin-right:1.2rem;font-size:.85rem}
+nav{margin:.8rem 0 1.4rem}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.86rem}
+td,th{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:left;vertical-align:top}
+th{color:var(--hot);font-weight:400;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em}
+.card{background:var(--pan);border:1px solid var(--line);border-radius:3px;padding:.9rem 1rem;margin:.5rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.7rem}
+.layer{display:flex;gap:.7rem;align-items:baseline;border-bottom:1px solid var(--line);padding:.4rem 0}
+.layer b{color:var(--hot);min-width:4.5rem;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:1rem}
+.gal a{display:block;color:var(--ink);text-decoration:none;font-size:.8rem}
+.gal img{width:100%;border:1px solid var(--line);border-radius:2px;display:block;margin-bottom:.35rem}
+.flow{font-size:.84rem;color:var(--dim);line-height:2.1}
+.flow span{background:var(--pan);border:1px solid var(--line);padding:.2rem .5rem;border-radius:2px;color:var(--ink)}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--dim);font-size:.8rem}
+code{color:var(--hot)}
+</style><div class="wrap"><h1>the collaborator corpus</h1><p class="dim">one architecture &middot; many projections &middot; many traversals &middot; many domains &middot; many collaborators</p><nav><a href="index.html">spine</a><a href="domains.html">domains</a>
+<a href="labs.html">labs</a><a href="posters.html">posters</a>
+<a href="corpus.html">corpus</a></nav><p>The prose original is his. What this site serves is its structured form: every domain, its subdomains, the enablement list that belongs to it, and the Holy Grail lab the corpus names for it. The structured form is the one a machine can act on, and it is what <code>tools/lab_gen.py</code> reads.</p><h2>the proposition</h2><div class="card">Bring your domain problem. Here is the reproducible computational and physical infrastructure to investigate it, from hardware to application. The Holy Grail laboratory closes the loop from hypothesis to verified realization.</div><h2>the three populations</h2><div class="grid"><div class="card"><b>Domain experts</b><div class="dim">questions, domain knowledge, hypotheses, experiments, instruments, datasets, validation criteria, real problems</div></div><div class="card"><b>Research and engineering builders</b><div class="dim">software, hardware, simulation, instrumentation, algorithms, models, integration</div></div><div class="card"><b>Infrastructure contributors</b><div class="dim">common representations, contracts, orchestration, provenance, verification, reproducibility, interoperability, deployment</div></div></div><h2>the contribution loop</h2><p class="flow"><span>common infrastructure</span> &rarr; <span>common contracts</span> &rarr; <span>domain lab kit</span> &rarr; <span>their own work</span> &rarr; <span>experiment / result</span> &rarr; <span>component, data, method, instrument, model</span> &rarr; <span>provenance</span> &rarr; <span>verify / reproduce</span> &rarr; <span>contribute back</span></p><h2>on the count</h2><div class="card dim">The total is DECLARED in the corpus; the names of the remainder are not. They are left unenumerated rather than invented to make the number come out. Each is added when the corpus, or a collaborator, actually names it.</div><h2>the text as filed</h2><p class="dim">If <code>CORPUS.md</code> was placed beside the seed script it was installed verbatim and is linked below. Otherwise this page carries the structured form only, and says so rather than implying the prose is here.</p><p id="cl"></p><script>fetch('CORPUS.md',{method:'HEAD'}).then(r=>{document.getElementById('cl').innerHTML=r.ok?'<a href="CORPUS.md">CORPUS.md</a> &mdash; the prose original, installed verbatim':'<span class="ne">CORPUS.md is not in this repository.</span>';}).catch(()=>{document.getElementById('cl').innerHTML='<span class="ne">CORPUS.md is not in this repository.</span>';});</script><footer>dhancha — the domain spine. &copy; 1993&ndash;2026 Abhishek Choudhary. All rights reserved. AyeAI.<br>Retrieve, don't reconstruct. Where the corpus does not establish a relationship, it is not inferred.</footer></div>

@@ -1,0 +1,12 @@
+{
+  "note": "Z15. A claim in a diff requires an entry here and a measurement artifact in the same change.",
+  "measurement": {
+    "required": true,
+    "artifact_paths": [
+      "evidence/",
+      "measurements/",
+      "bench/"
+    ]
+  },
+  "budgets": []
+}

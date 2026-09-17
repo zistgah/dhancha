@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "id": "aerospace",
+      "name": "aerospace",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "atlasviz",
+      "name": "atlasviz",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "chakra",
+      "name": "chakra",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "dhancha",
+      "name": "dhancha",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "ertabat",
+      "name": "communication engineering",
+      "script": "\u0627\u0631\u062a\u0628\u0627\u0637",
+      "state": "wired_unproven",
+      "kind": "domain",
+      "fakir": {
+        "isic": [
+          "J61 telecommunications",
+          "C26 computer, electronic and optical products"
+        ],
+        "isco": [
+          "2153 telecommunications engineers",
+          "3522 telecommunications technicians"
+        ],
+        "isced": [
+          "0714 electronics and automation",
+          "0611 computer use"
+        ],
+        "agi_layers": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "ilm_languages": []
+      }
+    },
+    {
+      "id": "fakir",
+      "name": "fakir",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "mez",
+      "name": "mez",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "pedler",
+      "name": "pedler",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "pench",
+      "name": "pench",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "rayman",
+      "name": "Project Ray-Man \u2014 universal tri-phibious anthropomorphic architecture",
+      "script": "",
+      "state": "not_built",
+      "kind": "domain",
+      "fakir": {
+        "isic": [
+          "C30 other transport equipment",
+          "C26 computer, electronic and optical products"
+        ],
+        "isco": [
+          "2144 mechanical engineers",
+          "2152 electrical engineers"
+        ],
+        "isced": [
+          "0716 motor vehicles, ships and aircraft",
+          "0714 electronics and automation"
+        ],
+        "agi_layers": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "ilm_languages": []
+      }
+    },
+    {
+      "id": "transeg",
+      "name": "transeg",
+      "kind": "component",
+      "state": "external"
+    },
+    {
+      "id": "zasab",
+      "name": "device control",
+      "script": "\u0627\u0639\u0635\u0627\u0628",
+      "state": "not_built",
+      "kind": "domain",
+      "fakir": {
+        "isic": [
+          "C26 computer, electronic and optical products",
+          "C28 machinery"
+        ],
+        "isco": [
+          "2152 electrical engineers",
+          "3113 electrical engineering technicians"
+        ],
+        "isced": [
+          "0714 electronics and automation"
+        ],
+        "agi_layers": [
+          "L0",
+          "L1",
+          "L2",
+          "L3"
+        ],
+        "ilm_languages": []
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "ertabat",
+      "to": "atlasviz",
+      "kind": "supplies",
+      "shared": "spectra and link budgets as a view; atlasviz draws, ertabat measures"
+    },
+    {
+      "from": "ertabat",
+      "to": "chakra",
+      "kind": "consumes",
+      "shared": "time and ephemeris \u2014 pass geometry and range rate come from the observatory kernel, not from a second almanac in this repo"
+    },
+    {
+      "from": "ertabat",
+      "to": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants"
+    },
+    {
+      "from": "ertabat",
+      "to": "fakir",
+      "kind": "same_lattice_point",
+      "shared": "ISIC J61 x ISCO 2153 x ISCED 0714 crossed with AGI layers L0-L5"
+    },
+    {
+      "from": "ertabat",
+      "to": "mez",
+      "kind": "mounts_in",
+      "shared": "a panel on the desk; sovereign, runs without it"
+    },
+    {
+      "from": "ertabat",
+      "to": "pedler",
+      "kind": "consumes",
+      "shared": "propagation as an event-hypergraph question rather than a closed-form path-loss table"
+    },
+    {
+      "from": "ertabat",
+      "to": "transeg",
+      "kind": "supplies",
+      "shared": "the link an embodiment's telemetry crosses; transeg owns the stages, ertabat owns the carrier"
+    },
+    {
+      "from": "ertabat",
+      "to": "zasab",
+      "kind": "shares_primitive",
+      "shared": "the interface/registry/port/conformance shape from dhancha; a radio is reached through the same driver ABI a sensor is"
+    },
+    {
+      "from": "rayman",
+      "to": "aerospace",
+      "kind": "same_lattice_point",
+      "shared": "ISIC C30 \u00d7 ISCO 2144 \u00d7 ISCED 0716"
+    },
+    {
+      "from": "rayman",
+      "to": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants and the rung ladder"
+    },
+    {
+      "from": "rayman",
+      "to": "ertabat",
+      "kind": "consumes",
+      "shared": "the link the article is commanded and telemetered over"
+    },
+    {
+      "from": "rayman",
+      "to": "pench",
+      "kind": "supplies",
+      "shared": "a manoeuvre with an operating envelope; a moving article that can injure"
+    },
+    {
+      "from": "rayman",
+      "to": "zasab",
+      "kind": "consumes",
+      "shared": "the device surface that moves a control"
+    },
+    {
+      "from": "zasab",
+      "to": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants"
+    },
+    {
+      "from": "zasab",
+      "to": "ertabat",
+      "kind": "shares_primitive",
+      "shared": "the interface/registry/port/conformance shape from dhancha; a sensor is reached the same way a radio is"
+    },
+    {
+      "from": "zasab",
+      "to": "fakir",
+      "kind": "same_lattice_point",
+      "shared": "ISIC C26 x ISCO 2152 x ISCED 0714, AGI layers L0-L3"
+    },
+    {
+      "from": "zasab",
+      "to": "mez",
+      "kind": "mounts_in",
+      "shared": "a panel on the desk; sovereign, runs without it"
+    },
+    {
+      "from": "zasab",
+      "to": "transeg",
+      "kind": "supplies",
+      "shared": "the hands and feet of an embodiment"
+    }
+  ]
+}

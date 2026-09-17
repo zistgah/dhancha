@@ -1,0 +1,71 @@
+{
+  "version": "0.1",
+  "invariants": [
+    {
+      "id": "D1",
+      "name": "one interface header",
+      "rule": "The domain declares its capability surface in exactly one normative interface file. The header contains no implementation and names no implementation.",
+      "checked_by": "spine_validate: interface file present, declared in descriptor, contains no function body"
+    },
+    {
+      "id": "D2",
+      "name": "registry, not call sites",
+      "rule": "Implementations are bound by a registry. No caller names an implementation. Deleting the registry must break binding, never compilation of callers.",
+      "checked_by": "spine_validate: no implementation id appears outside registry/ and descriptor"
+    },
+    {
+      "id": "D3",
+      "name": "ports include mock and template",
+      "rule": "The same interface is realised on N substrates. Two are mandatory: mock (runs with nothing attached) and template (the empty port a third party fills).",
+      "checked_by": "spine_validate: ports[] contains mock and template"
+    },
+    {
+      "id": "D4",
+      "name": "the harness is the definition",
+      "rule": "Conformance is an executable suite, not prose. Every condition carries a measurable acceptance criterion with units. A condition whose limit is unknown is written 'not established' — an invented limit is worse than an absent one.",
+      "checked_by": "spine_validate: every condition has criterion+unit or the exact string 'not established'"
+    },
+    {
+      "id": "D5",
+      "name": "one verb table, many surfaces",
+      "rule": "skills/verbs.json is the single source for every agent surface. A surface is generated, never hand-written.",
+      "checked_by": "spine_validate: verbs.json present, each verb has args+returns+preconditions"
+    },
+    {
+      "id": "D6",
+      "name": "closed attachment set",
+      "rule": "Foreign systems attach at a fixed enumerated set of points or not at all. A new kind of attachment is a contract change, not a patch.",
+      "checked_by": "spine_validate: INTEGRATION.md enumerates points; descriptor.attachment_points matches"
+    },
+    {
+      "id": "D7",
+      "name": "roadmap is data",
+      "rule": "Work is packages/tracks/milestones in JSON, validated in `make check`. Every package declares dependencies; packages with none are startable immediately by anyone.",
+      "checked_by": "spine_validate + validate_roadmap: ids unique, deps resolve, no cycles, >=1 zero-dependency package"
+    },
+    {
+      "id": "D8",
+      "name": "measure, then claim",
+      "rule": "A performance, coverage or completeness claim requires a recorded measurement in the same commit. One package, one pull request, one proof.",
+      "checked_by": "pr_gate: claim vocabulary in diff requires a budgets.json entry and a measurement artifact"
+    },
+    {
+      "id": "D9",
+      "name": "the engine is common, the workflow is not",
+      "rule": "Domains share this skeleton and NOTHING else. Each domain authors its own purpose, contract, context, state model, invariants, failure modes, evidence requirements, workflow and artifact model. Reuse the smallest primitive. Architecture is never inferred from code reuse.",
+      "checked_by": "spine_leak: no domain's distinctive nouns may appear in another domain's descriptor or prose"
+    },
+    {
+      "id": "D10",
+      "name": "nothing pretends",
+      "rule": "Built, wired-unproven, and not-built are three different states and are reported as three. No stub that looks alive. Absence is reported with where it was looked for.",
+      "checked_by": "spine_validate: descriptor.state values in {built,wired_unproven,not_built}; no other value accepted"
+    },
+    {
+      "id": "D11",
+      "name": "adopt before inventing; vendor without drifting",
+      "rule": "Where an external standard already covers a need, the spine emits that standard and records what it does NOT cover. Where a sovereign domain must vendor a shared primitive rather than import it, a behavioural drift check proves the copy still answers as the reference does.",
+      "checked_by": "spine_validate + core.drift: spine/standards.json is present and every entry names what it replaces and what it does not do; vendored primitives agree with core on a shared vector set"
+    }
+  ]
+}

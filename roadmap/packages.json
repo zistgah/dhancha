@@ -1,0 +1,84 @@
+{
+  "packages": [
+    {
+      "id": "DH-01",
+      "track": "T-SPINE",
+      "deps": [],
+      "owns": [
+        "tools/spine_validate.py"
+      ],
+      "brief": "Judge D1 and D2 without a compiler: parse the interface for implementation bodies and prove no caller names an implementation.",
+      "acceptance": [
+        "python3 tools/selftest.py",
+        "python3 tools/spine_validate.py descriptors/ertabat.json --repo ."
+      ]
+    },
+    {
+      "id": "DH-02",
+      "track": "T-SPINE",
+      "deps": [],
+      "owns": [
+        "tools/spine_leak.py"
+      ],
+      "brief": "Extend D9 from declared nouns to stem-matched nouns, and prove it does not fire on a word both domains legitimately own.",
+      "acceptance": [
+        "python3 tools/spine_leak.py descriptors/zasab.json descriptors/ertabat.json"
+      ]
+    },
+    {
+      "id": "DH-03",
+      "track": "T-GEN",
+      "deps": [
+        "DH-01"
+      ],
+      "owns": [
+        "tools/spine_new.py"
+      ],
+      "brief": "Generate descriptor stubs for a whole ISIC section in one run, each with its ISCO and ISCED cross-references read from the FAKIR lattice file rather than passed by hand.",
+      "acceptance": [
+        "python3 tools/spine_new.py --fakir ISIC:C24 --id x --name y --out-descriptor /dev/stdout"
+      ]
+    },
+    {
+      "id": "DH-04",
+      "track": "T-GEN",
+      "deps": [
+        "DH-03"
+      ],
+      "owns": [
+        "tools/spine_new.py",
+        "spine/spine.schema.json"
+      ],
+      "brief": "Add the ILM language axis to generation so a domain is seeded as (domain x AGI layer x language), matching FAKIR's three-axis seeding model.",
+      "acceptance": [
+        "python3 tools/selftest.py"
+      ]
+    },
+    {
+      "id": "DH-05",
+      "track": "T-CORR",
+      "deps": [],
+      "owns": [
+        "tools/spine_correlate.py",
+        "docs/index.html"
+      ],
+      "brief": "Emit the correlation graph in the {nodes,families,layers} shape zistgah/dome's pointcloud builder already consumes, so the graph mounts as a dome display with no new render code.",
+      "acceptance": [
+        "python3 tools/spine_correlate.py descriptors/zasab.json descriptors/ertabat.json --out docs/correlation.json"
+      ]
+    },
+    {
+      "id": "DH-06",
+      "track": "T-CYC",
+      "deps": [],
+      "owns": [
+        "cyclers/"
+      ],
+      "brief": "Add one cycler per invariant class so a contributor can be handed D4 (conformance authoring) or D7 (roadmap authoring) as a prompt cycle rather than a paragraph.",
+      "acceptance": [
+        "bash ops/pni_check.sh || true",
+        "python3 tools/selftest.py"
+      ]
+    }
+  ]
+}

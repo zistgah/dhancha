@@ -1,0 +1,107 @@
+REM dhancha — instantiate a new FAKIR domain on the spine
+REM targets PANINI spec as published at zistgah/panini; check with ops/pni_check.sh
+CYCLER "dhancha"
+TITLE "Instantiate a domain"
+OUTPUT KIND SPINE
+RESOLUTION EASY
+
+STAGE CONCEPT
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Name the domain and the one capability it abstracts.
+    Not the field it belongs to — the capability. "Communication engineering" is a
+    field; "acquire, transform and deliver a signal across a link whose geometry is
+    changing" is a capability.
+    Then name the FAKIR lattice point: ISIC section, ISCO major group, ISCED field,
+    and which AGI layers L0-L9 this domain reaches.
+    If you cannot state the capability in one sentence, the domain is not yet a domain.
+  >>
+  EXPECT TEXT
+  VALIDATE "a capability, not a field"
+END STAGE
+
+STAGE INTERFACE
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Write the capability surface as function signatures only. D1: no bodies, no
+    implementation named anywhere in this file.
+    Every operation must be one a mock can satisfy with nothing attached.
+    If an operation cannot be mocked, it is not a capability, it is a device.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE CONFORMANCE
+  VERB MEASURE
+  SHAPE JSON
+  ASK <<
+    List the conditions any implementation must satisfy. For each: id, condition,
+    criterion, unit, and the source the number came from.
+    Where the limit is not known, write exactly: not established.
+    An invented limit is worse than an absent one, and a criterion with no unit is
+    not a criterion.
+  >>
+  EXPECT JSON
+  VALIDATE "every criterion has a unit or says not established"
+END STAGE
+
+STAGE PORTS
+  VERB CREATE
+  SHAPE LIST
+  ASK <<
+    List the substrates this interface will be realised on. Two are mandatory: mock,
+    and template. Name what each remaining port exists to reach, and what it cannot do.
+  >>
+  EXPECT LIST
+END STAGE
+
+STAGE CORRELATE
+  VERB INTEGRATE
+  SHAPE JSON
+  ASK <<
+    Declare the correlations. For each: with, kind (shares_primitive, consumes,
+    supplies, co_located, same_lattice_point, mounts_in), and exactly what is shared.
+    A shared primitive must be declared from BOTH ends. If the other end has not
+    declared it, the relation is a proposal, not a correlation — mark it so.
+    Do not claim a relation because two things sound related.
+  >>
+  EXPECT JSON
+END STAGE
+
+STAGE ROADMAP
+  VERB CREATE
+  SHAPE JSON
+  ASK <<
+    Break the domain into packages. Each: id, track, deps, owns (paths), brief,
+    acceptance (commands that must exit 0).
+    At least one package must have no dependencies, or nobody can start.
+    A package whose acceptance is "review it" is not a package.
+  >>
+  EXPECT JSON
+END STAGE
+
+STAGE FALSIFY
+  VERB FALSIFY
+  SHAPE TEXT
+  ASK <<
+    Try to break your own descriptor. Name the vocabulary you borrowed from another
+    domain. Name the conformance number you cannot source. Name the package you could
+    not actually start tomorrow.
+    Report what you found, not that you looked.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE SEAL
+  VERB VERIFY
+  SHAPE TEXT
+  ASK <<
+    Run: python3 tools/spine_validate.py <descriptor> --repo <tree>
+    Then: python3 tools/spine_leak.py <all descriptors>
+    Paste both outputs verbatim. Not a summary of them.
+  >>
+  EXPECT TEXT
+  GATE "SEAL domain"
+END STAGE

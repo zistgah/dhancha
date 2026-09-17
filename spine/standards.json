@@ -1,0 +1,50 @@
+{
+  "rule": "Each entry names something the spine used to invent. A standard is adopted for what it actually covers and for nothing else; what it does NOT do is recorded beside it so the adoption is not read as a guarantee.",
+  "standards": [
+    {
+      "id": "CYCLONEDX",
+      "name": "OWASP CycloneDX, ECMA-424",
+      "version_floor": "1.6",
+      "replaces": "the ad-hoc BoM CSV invented in core.bom",
+      "covers": "HBOM for physical parts (component type 'device'), OBOM for the runtime configuration, MBOM for what a lab is assembled from; CDXA for attestations",
+      "does_not": "it does not price anything. Provenance of a price stays this estate's problem.",
+      "ties_to": "in-toto predicate type https://cyclonedx.org/bom — the same in-toto Statement v1 the Candor receipts already use"
+    },
+    {
+      "id": "DEVCONTAINER",
+      "name": "Development Containers Specification",
+      "version_floor": "devcontainer.json (containers.dev)",
+      "replaces": "a bespoke 'how to start this lab' README step",
+      "covers": "one file that VS Code, Codespaces, DevPod, Coder and the devcontainer CLI all read; hostRequirements states the RAM, CPU and storage the lab needs",
+      "does_not": "it does not provision hardware, and it is not a multi-container orchestrator — compose is still referenced for that.",
+      "ties_to": "layer 1 to layer 3 of labs/stack.json"
+    },
+    {
+      "id": "ROCRATE",
+      "name": "RO-Crate",
+      "version_floor": "1.2",
+      "replaces": "an evidence folder whose contents only a human could interpret",
+      "covers": "ro-crate-metadata.json, JSON-LD over schema.org: what was captured, by what instrument, when, by whom, under what licence",
+      "does_not": "it asserts nothing about whether the measurement is correct.",
+      "ties_to": "the evidence requirement in D4 and in every lab kit"
+    },
+    {
+      "id": "TRL",
+      "name": "Technology Readiness Levels, ISO 16290:2013",
+      "version_floor": "TRL 1-9",
+      "replaces": "nothing — the five-rung ladder stays. This is a DECLARED MAPPING so a collaborator can state a TRL to a funder without inventing one",
+      "covers": "the nine-level maturity scale ESA, NASA, the US DoD and Horizon Europe all read",
+      "does_not": "a rung does not compute a TRL. The mapping gives a RANGE, and the assessment itself is left to the adopting organisation, exactly as ISO 16290 leaves it.",
+      "ties_to": "core.rungs"
+    },
+    {
+      "id": "UCUM",
+      "name": "Unified Code for Units of Measure",
+      "version_floor": "UCUM case-sensitive codes",
+      "replaces": "free-text units in conformance conditions ('Hz and Hz/s', 'microseconds')",
+      "covers": "machine-readable unit codes, prefixes, and {annotation} syntax for dimensionless quantities",
+      "does_not": "it carries no ontology; QUDT is where a unit links to its quantity kind.",
+      "ties_to": "D4 — a criterion with no unit is not a criterion"
+    }
+  ]
+}

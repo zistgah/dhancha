@@ -1,0 +1,191 @@
+{
+  "id": "ertabat",
+  "name": "communication engineering",
+  "script": "ارتباط",
+  "gloss": "connection, communication",
+  "fakir": {
+    "isic": [
+      "J61 telecommunications",
+      "C26 computer, electronic and optical products"
+    ],
+    "isco": [
+      "2153 telecommunications engineers",
+      "3522 telecommunications technicians"
+    ],
+    "isced": [
+      "0714 electronics and automation",
+      "0611 computer use"
+    ],
+    "agi_layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5"
+    ],
+    "ilm_languages": []
+  },
+  "interface": "src/ertabat/hal/base.py",
+  "registry": "src/ertabat/hal/registry.py",
+  "implementations": [
+    "stub"
+  ],
+  "ports": [
+    "stub",
+    "template",
+    "mock"
+  ],
+  "conformance": [
+    {
+      "id": "ERT-C1",
+      "condition": "Doppler across a LEO pass is computed, not assumed",
+      "criterion": "max shift and rate returned for a stated altitude and frequency, or Unknown naming what is missing",
+      "unit": "Hz and Hz/s",
+      "source": "link.geometry",
+      "unit_ucum": "Hz",
+      "unit_note": "residual carrier offset, expressed against subcarrier spacing"
+    },
+    {
+      "id": "ERT-C2",
+      "condition": "duplexing verdict is derived from the guard interval",
+      "criterion": "FDD or TDD returned with the cell radius the guard actually buys",
+      "unit": "km",
+      "source": "ntn.duplex",
+      "unit_ucum": "km",
+      "unit_note": "cell radius the guard interval buys"
+    },
+    {
+      "id": "ERT-C3",
+      "condition": "HARQ process count against the round trip",
+      "criterion": "processes needed compared with processes available",
+      "unit": "count",
+      "source": "ntn.timing",
+      "unit_ucum": "{count}",
+      "unit_note": "HARQ processes"
+    },
+    {
+      "id": "ERT-C4",
+      "condition": "PRACH differential delay against the cyclic prefix",
+      "criterion": "differential delay and CP both reported; a shortfall is named",
+      "unit": "microseconds",
+      "source": "ntn.timing",
+      "unit_ucum": "us",
+      "unit_note": "differential delay against the cyclic prefix"
+    },
+    {
+      "id": "ERT-C5",
+      "condition": "beam dwell sets the handover cadence",
+      "criterion": "dwell time returned for a stated beamwidth and altitude",
+      "unit": "seconds",
+      "source": "link.geometry",
+      "unit_ucum": "s",
+      "unit_note": "beam dwell"
+    },
+    {
+      "id": "ERT-C6",
+      "condition": "a link budget with a missing term does not close",
+      "criterion": "margin is Unknown when any term is Unknown; arithmetic on Unknown raises",
+      "unit": "dB",
+      "source": "link.budget, contract R1",
+      "unit_ucum": "dB",
+      "unit_note": "link margin"
+    },
+    {
+      "id": "ERT-C7",
+      "condition": "atmospheric loss above 10 GHz",
+      "criterion": "not established",
+      "unit": "not established",
+      "source": "returns Unknown until the ITU coefficient tables are populated — packets ATM-1, ATM-2",
+      "unit_ucum": "not established"
+    },
+    {
+      "id": "ERT-C8",
+      "condition": "an unbound radio refuses to produce samples",
+      "criterion": "NotFitted is raised; the conformance harness catches a driver that fabricates",
+      "unit": "boolean",
+      "source": "hal.conformance, mutation-tested against a liar",
+      "unit_ucum": "{boolean}"
+    },
+    {
+      "id": "ERT-C9",
+      "condition": "a price carries its source and timestamp",
+      "criterion": "a quote without source and retrieved_utc is refused; an unpriced line blocks the total",
+      "unit": "boolean",
+      "source": "contract R3",
+      "unit_ucum": "{boolean}"
+    }
+  ],
+  "verbs": "skills/claude/SKILL.md",
+  "attachment_points": [
+    "RADIO: a SoapySDR or UHD device handle",
+    "STACK: an external cellular stack process (srsRAN, OpenAirInterface) over its own control socket",
+    "EPHEMERIS: an orbit propagator supplying pass geometry and range rate",
+    "TRANSPORT: a byte sink or source outside this domain"
+  ],
+  "state": "wired_unproven",
+  "distinctive_nouns": [
+    "doppler",
+    "scintillation",
+    "duplexing",
+    "transponder",
+    "downconverter",
+    "subcarrier",
+    "ephemeris",
+    "footprint",
+    "preamble",
+    "waveform",
+    "spectrum",
+    "antenna"
+  ],
+  "correlates": [
+    {
+      "with": "zasab",
+      "kind": "shares_primitive",
+      "shared": "the interface/registry/port/conformance shape from dhancha; a radio is reached through the same driver ABI a sensor is"
+    },
+    {
+      "with": "chakra",
+      "kind": "consumes",
+      "shared": "time and ephemeris — pass geometry and range rate come from the observatory kernel, not from a second almanac in this repo"
+    },
+    {
+      "with": "transeg",
+      "kind": "supplies",
+      "shared": "the link an embodiment's telemetry crosses; transeg owns the stages, ertabat owns the carrier"
+    },
+    {
+      "with": "pedler",
+      "kind": "consumes",
+      "shared": "propagation as an event-hypergraph question rather than a closed-form path-loss table"
+    },
+    {
+      "with": "atlasviz",
+      "kind": "supplies",
+      "shared": "spectra and link budgets as a view; atlasviz draws, ertabat measures"
+    },
+    {
+      "with": "fakir",
+      "kind": "same_lattice_point",
+      "shared": "ISIC J61 x ISCO 2153 x ISCED 0714 crossed with AGI layers L0-L5"
+    },
+    {
+      "with": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants"
+    },
+    {
+      "with": "mez",
+      "kind": "mounts_in",
+      "shared": "a panel on the desk; sovereign, runs without it"
+    }
+  ],
+  "vendors": [
+    {
+      "primitive": "core.bom",
+      "module": "bom.model",
+      "path": "src/ertabat/bom/model.py",
+      "why": "a sovereign domain cannot import another repository at run time; it vendors, and core.drift proves it has not diverged"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+REM dhancha — realise one port of an existing interface
+CYCLER "port"
+TITLE "Bring up one port"
+OUTPUT KIND PORT
+RESOLUTION MID
+
+STAGE CONCEPT
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Which substrate, and what is physically present when this port runs?
+    Name the hardware or runtime by part number or version. "An embedded board" is
+    not an answer. If nothing is present and this is a simulation, say so here —
+    a simulated bring-up reported as a bring-up is the defect this stage exists to stop.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE ENVELOPE
+  VERB MEASURE
+  SHAPE JSON
+  ASK <<
+    State the operating envelope of this substrate: the limits, what happens outside
+    them, and how it fails. Unknown limits are written: not established.
+  >>
+  EXPECT JSON
+END STAGE
+
+STAGE IMPLEMENT
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Implement every function in the interface for this substrate. An operation the
+    substrate cannot perform returns the unsupported code — it never returns success
+    with a fabricated value.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE HARNESS
+  VERB EXECUTE
+  SHAPE TEXT
+  ASK <<
+    Run the conformance harness against this port. Paste the output.
+    A condition marked not established cannot pass and cannot fail; it is reported
+    as unjudged.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE EVIDENCE
+  VERB MEASURE
+  SHAPE DATA
+  ASK <<
+    Attach the captured evidence: the transcript, the trace, the log, timestamped.
+    Evidence is captured, never generated. If you have none, say you have none.
+  >>
+  EXPECT DATA
+END STAGE
+
+STAGE GATE
+  VERB VERIFY
+  SHAPE TEXT
+  ASK <<
+    State what is proven on real hardware, what is proven only against the mock, and
+    what is not proven at all. Three lists. An empty list is a valid answer.
+  >>
+  EXPECT TEXT
+  GATE "PORT ready"
+END STAGE

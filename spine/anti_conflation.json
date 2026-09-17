@@ -1,0 +1,88 @@
+{
+  "source": "Humanesque posters 03 and 06 (his corpus) — DO NOT CONFLATE / anti-conflation rules",
+  "rule": "These are not stylistic preferences. Each names a collapse that has actually happened in this estate or is about to.",
+  "pairs": [
+    [
+      "ontology position",
+      "domain"
+    ],
+    [
+      "cultural projection",
+      "stage"
+    ],
+    [
+      "traversal",
+      "ontology"
+    ],
+    [
+      "component",
+      "pipeline"
+    ],
+    [
+      "cycler",
+      "sequence"
+    ],
+    [
+      "zamin",
+      "the physical world"
+    ],
+    [
+      "fiza",
+      "an ecosystem"
+    ],
+    [
+      "kaivalyik",
+      "kaivalyik AGI"
+    ],
+    [
+      "panini",
+      "biology alone"
+    ],
+    [
+      "the genetic branch",
+      "panini"
+    ],
+    [
+      "pat.al",
+      "pratik"
+    ],
+    [
+      "pratik",
+      "vidya"
+    ],
+    [
+      "vidya",
+      "vikram"
+    ],
+    [
+      "vikram",
+      "twisha"
+    ],
+    [
+      "local execution",
+      "the architecture"
+    ],
+    [
+      "genie",
+      "a worker"
+    ],
+    [
+      "holy grail labs",
+      "a single lab or domain"
+    ],
+    [
+      "the execution stack",
+      "humanesque itself"
+    ]
+  ],
+  "prohibitions": [
+    "do not flatten the architecture into a linear pipeline",
+    "do not turn traversals into stages",
+    "do not turn components into parents",
+    "do not reduce panini to biological realization only",
+    "do not merge pat.al, pratik, vidya or vikram",
+    "do not convert the cyclers into a pipeline; they are peers",
+    "do not treat local execution as the architecture",
+    "do not invent relationships — if the retrieved corpus does not establish the relationship, do not infer it"
+  ]
+}

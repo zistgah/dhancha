@@ -1,0 +1,160 @@
+{
+  "id": "rayman",
+  "name": "Project Ray-Man — universal tri-phibious anthropomorphic architecture",
+  "script": "",
+  "gloss": "one morphing manta-derived airframe, from a classroom glider to an interstellar sail",
+  "fakir": {
+    "isic": [
+      "C30 other transport equipment",
+      "C26 computer, electronic and optical products"
+    ],
+    "isco": [
+      "2144 mechanical engineers",
+      "2152 electrical engineers"
+    ],
+    "isced": [
+      "0716 motor vehicles, ships and aircraft",
+      "0714 electronics and automation"
+    ],
+    "agi_layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "ilm_languages": []
+  },
+  "interface": "include/rayman_hal.h",
+  "registry": "src/registry.c",
+  "implementations": [
+    "glider_epp",
+    "microquad_pod",
+    "mock"
+  ],
+  "ports": [
+    "sim",
+    "mock",
+    "template"
+  ],
+  "class": "concept embodiment",
+  "class_note": "A concept embodiment is a SCALE-SPANNING architecture, not a product. It is carried at the rung it actually reached and no higher: the ₹150 EPP glider with a ₹1,000 micro-quad pod is a real classroom laboratory and enters at BENCH; every larger scale enters at SPEC and stays there until something is built.",
+  "scales": [
+    {
+      "scale": "classroom",
+      "artifact": "EPP glider plus micro-quad pod and wheels",
+      "rung": "BENCH",
+      "cost": "INR 150 airframe, INR 1,000 pod — as stated in the corpus, unverified against a current quote"
+    },
+    {
+      "scale": "colossal transport",
+      "artifact": "100 m blended-wing-body transport ray, ekranoplan mode",
+      "rung": "SPEC",
+      "claim_in_corpus": "40 percent fuel efficiency in ground effect — NOT established here"
+    },
+    {
+      "scale": "orbital",
+      "artifact": "kilometre-wide orbital ray station, spinning habitat, thin-film solar and radiator wings",
+      "rung": "SPEC"
+    },
+    {
+      "scale": "interstellar",
+      "artifact": "star-ray with photonic sail and magnetic braking",
+      "rung": "SPEC"
+    },
+    {
+      "scale": "nano-cybernetic",
+      "artifact": "cell-rover crossing the blood-brain barrier, chemotaxis navigation, sub-thermionic logic",
+      "rung": "SPEC",
+      "gate": "any biological claim here is governed by the estate's SaMD framework, which certifies nothing"
+    }
+  ],
+  "conformance": [
+    {
+      "id": "RAY-C1",
+      "condition": "the classroom article flies",
+      "criterion": "a recorded flight of the EPP glider under its own pod",
+      "unit": "boolean",
+      "source": "capture it",
+      "unit_ucum": "{boolean}"
+    },
+    {
+      "id": "RAY-C2",
+      "condition": "lift model matches the article",
+      "criterion": "not established",
+      "unit": "not established",
+      "source": "L = ½ρv²ACl is the textbook form; the article's Cl is unmeasured",
+      "unit_ucum": "not established"
+    },
+    {
+      "id": "RAY-C3",
+      "condition": "morphing geometry transition",
+      "criterion": "not established",
+      "unit": "not established",
+      "source": "no mechanism has been built at any scale",
+      "unit_ucum": "not established"
+    },
+    {
+      "id": "RAY-C4",
+      "condition": "tri-phibious transition",
+      "criterion": "not established",
+      "unit": "not established",
+      "source": "air, water and vacuum transitions share a name in the concept and nothing else yet",
+      "unit_ucum": "not established"
+    },
+    {
+      "id": "RAY-C5",
+      "condition": "no scale inherits another's evidence",
+      "criterion": "a claim at one scale is never read at another",
+      "unit": "boolean",
+      "source": "core.rungs",
+      "unit_ucum": "{boolean}"
+    }
+  ],
+  "verbs": "skills/verbs.json",
+  "attachment_points": [
+    "AIRFRAME: a physical article",
+    "CONTROL: a zasab device surface",
+    "SIMULATION: an external flight-dynamics solver",
+    "LINK: an ertabat radio"
+  ],
+  "state": "not_built",
+  "distinctive_nouns": [
+    "glider",
+    "airframe",
+    "morphing",
+    "ekranoplan",
+    "manta",
+    "sail",
+    "triphibious",
+    "keel",
+    "cell-rover"
+  ],
+  "correlates": [
+    {
+      "with": "zasab",
+      "kind": "consumes",
+      "shared": "the device surface that moves a control"
+    },
+    {
+      "with": "ertabat",
+      "kind": "consumes",
+      "shared": "the link the article is commanded and telemetered over"
+    },
+    {
+      "with": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants and the rung ladder"
+    },
+    {
+      "with": "aerospace",
+      "kind": "same_lattice_point",
+      "shared": "ISIC C30 × ISCO 2144 × ISCED 0716"
+    },
+    {
+      "with": "pench",
+      "kind": "supplies",
+      "shared": "a manoeuvre with an operating envelope; a moving article that can injure"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "rule": "A domain id that is also an ordinary word will appear in prose that is not about that domain. Precedent (25 Aug, panini/mez): NAME the collision, never widen the exemption until nothing fails.",
+  "collisions": [
+    {
+      "id": "biology",
+      "appears_in": "docs/index.html",
+      "because": "the anti-conflation pair 'panini ≠ biology alone' is corpus text about a component, not a reference to the biology domain"
+    },
+    {
+      "id": "stub",
+      "appears_in": "core/device.py, tools/spine_new.py, tools/selftest.py",
+      "because": "'stub' is the ordinary word for a refusing placeholder and is used as such across the skeleton; it is also a port id in one domain. Named, not exempted."
+    }
+  ]
+}

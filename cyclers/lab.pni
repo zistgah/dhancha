@@ -1,0 +1,92 @@
+REM dhancha — stand up a dockerised lab for one collaborator domain
+CYCLER "lab"
+TITLE "A laboratory for your own work"
+OUTPUT KIND LAB
+RESOLUTION EASY
+
+STAGE CONCEPT
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Name the domain, and the ONE piece of your own regular work this lab has to serve
+    on the first day. Not the research programme — the thing on your desk this week.
+    A lab justified only by what it might enable later is a lab nobody switches on.
+    Then name what you already have: the machine, the instruments, the licences.
+  >>
+  EXPECT TEXT
+  VALIDATE "names one real piece of the collaborator's own work"
+END STAGE
+
+STAGE ENABLEMENT
+  VERB CREATE
+  SHAPE LIST
+  ASK <<
+    List what the stack actually gives this domain, layer by layer, and for each item say
+    which of the collaborator's tasks it touches.
+    Then list what it does NOT give them, and what they will still need elsewhere.
+    An enablement list with nothing absent on it has not been thought about.
+  >>
+  EXPECT LIST
+END STAGE
+
+STAGE COMPONENTS
+  VERB INTEGRATE
+  SHAPE LIST
+  ASK <<
+    Which Humanesque components does this domain genuinely use? Not every domain gets
+    every component. For each one you include, name the task it serves; a component with
+    no named task comes out.
+    Do not equate a component with a pipeline, and do not make one component the parent
+    of another.
+  >>
+  EXPECT LIST
+END STAGE
+
+STAGE BOM
+  VERB MEASURE
+  SHAPE DATA
+  ASK <<
+    Price layers 0 and 1. Every row carries the part, the quantity, the price, the
+    currency, the SOURCE and the time you retrieved it.
+    A row you cannot price stays unpriced, and the total stays Unknown. Do not quote a
+    total over the priced rows — that reads as the cost of the build.
+  >>
+  EXPECT DATA
+END STAGE
+
+STAGE GRAIL
+  VERB CREATE
+  SHAPE TEXT
+  ASK <<
+    Instantiate the loop for this domain: research, formalisation, simulation, prototype,
+    experiment, instrumentation, observation, evidence, verification, revision.
+    For each step say what the artifact is HERE. A step whose artifact you cannot name is
+    a step this lab does not yet close.
+    Then state the rung each of this domain's current claims enters at.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE FALSIFY
+  VERB FALSIFY
+  SHAPE TEXT
+  ASK <<
+    What would make a collaborator abandon this lab in week two? Name the dependency that
+    will not install, the instrument driver that does not exist, the licence they do not
+    have, the dataset that is not public.
+    Report what you found, not that you looked.
+  >>
+  EXPECT TEXT
+END STAGE
+
+STAGE HANDOVER
+  VERB VERIFY
+  SHAPE TEXT
+  ASK <<
+    Run: docker compose build, then the lab's own check.
+    Paste the output. Then state the three lists: what runs, what is wired but unproven,
+    what is not built. An empty list is a valid answer; a missing list is not.
+  >>
+  EXPECT TEXT
+  GATE "LAB ready"
+END STAGE

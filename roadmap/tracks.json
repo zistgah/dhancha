@@ -1,0 +1,20 @@
+{
+  "tracks": [
+    {
+      "id": "T-SPINE",
+      "name": "the skeleton itself"
+    },
+    {
+      "id": "T-GEN",
+      "name": "generation from the FAKIR lattice"
+    },
+    {
+      "id": "T-CORR",
+      "name": "correlation and the estate graph"
+    },
+    {
+      "id": "T-CYC",
+      "name": "cycler configuration"
+    }
+  ]
+}

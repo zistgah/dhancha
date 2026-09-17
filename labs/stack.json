@@ -1,0 +1,76 @@
+{
+  "name": "the common lab stack",
+  "source": "Humanesque posters 03 and 04 (his corpus)",
+  "rule": "Each domain receives a reproducible, dockerised research environment. NOT every domain gets every component. Keep it minimal and fit for purpose.",
+  "layers": [
+    {
+      "n": 7,
+      "name": "Applications",
+      "holds": "domain tools, notebooks, models, UI, dashboards"
+    },
+    {
+      "n": 6,
+      "name": "Humanesque components",
+      "holds": "PANINI, ILM, PEDLER, PRATIK, VIDYA, PAT.AL, AyeAM — as needed, never all"
+    },
+    {
+      "n": 5,
+      "name": "GENIE orchestration",
+      "holds": "composition, tool use, persistent state, cross-domain execution"
+    },
+    {
+      "n": 4,
+      "name": "Research software stack",
+      "holds": "Python, Julia, R, C/C++, MATLAB-compatible workflows, domain libraries, simulation engines"
+    },
+    {
+      "n": 3,
+      "name": "Container runtime",
+      "holds": "Docker or Podman, compose, Kubernetes where the work needs it"
+    },
+    {
+      "n": 2,
+      "name": "OS, drivers, firmware",
+      "holds": "Linux, CUDA/ROCm, hardware interfaces, device permissions"
+    },
+    {
+      "n": 1,
+      "name": "Hardware",
+      "holds": "laptop → workstation → rack → cluster; GPU, CPU, FPGA, MCU, sensors"
+    },
+    {
+      "n": 0,
+      "name": "Physical world",
+      "holds": "instruments, experiments, environments, real-world systems"
+    }
+  ],
+  "profiles": {
+    "classroom": {
+      "target": "a student or a school",
+      "hardware": "laptop or SBC, no GPU",
+      "cost": "not established"
+    },
+    "bench": {
+      "target": "one researcher",
+      "hardware": "laptop plus instruments and an MCU",
+      "cost": "not established"
+    },
+    "workstation": {
+      "target": "a small laboratory",
+      "hardware": "GPU workstation plus domain instruments",
+      "cost": "not established",
+      "reference_unit": "ASUS TUF A15, Ryzen 7 7445HS, 16 GB, RTX 3050 4 GB, Radeon 740M — the seed unit named in his corpus"
+    },
+    "cluster": {
+      "target": "a department",
+      "hardware": "rack or cluster",
+      "cost": "not established"
+    },
+    "composed": {
+      "target": "a cross-domain community",
+      "hardware": "the union of the labs it crosses",
+      "cost": "not established"
+    }
+  },
+  "cost_note": "Every cost above is 'not established' until a bill of materials is priced with core.bom, where a quote carries its source and its timestamp and an unpriced line blocks the total. 'Low cost' is a measurement, not an adjective."
+}

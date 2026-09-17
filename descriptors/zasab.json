@@ -1,0 +1,127 @@
+{
+  "id": "zasab",
+  "name": "device control",
+  "script": "اعصاب",
+  "gloss": "nerves",
+  "fakir": {
+    "isic": [
+      "C26 computer, electronic and optical products",
+      "C28 machinery"
+    ],
+    "isco": [
+      "2152 electrical engineers",
+      "3113 electrical engineering technicians"
+    ],
+    "isced": [
+      "0714 electronics and automation"
+    ],
+    "agi_layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "ilm_languages": []
+  },
+  "interface": "include/zasab_hal.h",
+  "registry": "src/registry.c",
+  "implementations": [
+    "gpio",
+    "pwm",
+    "adc",
+    "i2c",
+    "spi",
+    "uart"
+  ],
+  "ports": [
+    "posix",
+    "linux",
+    "esp32",
+    "arduino",
+    "txw818",
+    "mock",
+    "template"
+  ],
+  "conformance": [
+    {
+      "id": "ZAS-C1",
+      "condition": "manifest gate admits only a signed manifest",
+      "criterion": "an unsigned or altered manifest is refused",
+      "unit": "boolean",
+      "source": "HMAC over the manifest",
+      "unit_ucum": "{boolean}"
+    },
+    {
+      "id": "ZAS-C2",
+      "condition": "pull only",
+      "criterion": "the device opens every connection; no inbound listener",
+      "unit": "boolean",
+      "source": "architecture",
+      "unit_ucum": "{boolean}"
+    },
+    {
+      "id": "ZAS-C3",
+      "condition": "driver ABI version is explicit",
+      "criterion": "a driver built against a different ABI major is refused at registration",
+      "unit": "version",
+      "source": "architecture",
+      "unit_ucum": "{semver}",
+      "unit_note": "driver ABI major"
+    },
+    {
+      "id": "ZAS-C4",
+      "condition": "actuation envelope",
+      "criterion": "not established",
+      "unit": "not established",
+      "source": "depends on the actuator fitted; state the part and measure it",
+      "unit_ucum": "not established"
+    }
+  ],
+  "verbs": "skills/verbs.json",
+  "attachment_points": [
+    "RTI",
+    "MATLAB/Simulink/Octave",
+    "CAD/CAM/EDA",
+    "a byte transport"
+  ],
+  "state": "not_built",
+  "distinctive_nouns": [
+    "actuator",
+    "manifest",
+    "pull",
+    "gpio",
+    "pwm",
+    "solenoid",
+    "firmware",
+    "relay",
+    "servo",
+    "peripheral"
+  ],
+  "correlates": [
+    {
+      "with": "ertabat",
+      "kind": "shares_primitive",
+      "shared": "the interface/registry/port/conformance shape from dhancha; a sensor is reached the same way a radio is"
+    },
+    {
+      "with": "dhancha",
+      "kind": "consumes",
+      "shared": "the ten invariants"
+    },
+    {
+      "with": "transeg",
+      "kind": "supplies",
+      "shared": "the hands and feet of an embodiment"
+    },
+    {
+      "with": "fakir",
+      "kind": "same_lattice_point",
+      "shared": "ISIC C26 x ISCO 2152 x ISCED 0714, AGI layers L0-L3"
+    },
+    {
+      "with": "mez",
+      "kind": "mounts_in",
+      "shared": "a panel on the desk; sovereign, runs without it"
+    }
+  ]
+}

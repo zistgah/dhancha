@@ -1,0 +1,1943 @@
+{
+  "declared_total": 390,
+  "declared_by": "Humanesque Collaborator Domain Map (his corpus, poster 03)",
+  "enumerated_here": 66,
+  "unenumerated": 344,
+  "enumeration_note": "The total is DECLARED in the corpus; the names of the remainder are not. They are left unenumerated rather than invented to make the number come out. Each is added when the corpus, or a collaborator, actually names it.",
+  "families": [
+    {
+      "code": "A",
+      "name": "Natural sciences",
+      "id_range": "D001-D007"
+    },
+    {
+      "code": "B",
+      "name": "Engineering and technology",
+      "id_range": "D008-D045"
+    },
+    {
+      "code": "C",
+      "name": "Computing and digital technology",
+      "id_range": "D046-D074"
+    },
+    {
+      "code": "D",
+      "name": "Life sciences and bioengineering",
+      "id_range": "D075-D100"
+    },
+    {
+      "code": "E",
+      "name": "Medicine and healthcare",
+      "id_range": "D101-D122"
+    },
+    {
+      "code": "F",
+      "name": "Social sciences",
+      "id_range": "D123-D148"
+    },
+    {
+      "code": "G",
+      "name": "Agriculture, food and biosciences",
+      "id_range": "D149-D156"
+    },
+    {
+      "code": "H",
+      "name": "Architecture, built environment and cities",
+      "id_range": "D157-D169"
+    },
+    {
+      "code": "I",
+      "name": "Education and human development",
+      "id_range": "not established"
+    },
+    {
+      "code": "J",
+      "name": "Law, policy and regulation",
+      "id_range": "D205-D221"
+    },
+    {
+      "code": "N",
+      "name": "Energy and resources",
+      "id_range": "D270-D284"
+    },
+    {
+      "code": "P",
+      "name": "Education and mobility",
+      "id_range": "D301-D313"
+    },
+    {
+      "code": "Q",
+      "name": "Media, arts and creative industries",
+      "id_range": "D314-D329"
+    },
+    {
+      "code": "R",
+      "name": "Government, civil society and public systems",
+      "id_range": "D330-D344"
+    },
+    {
+      "code": "S",
+      "name": "Environment, climate and planetary systems",
+      "id_range": "D345-D358"
+    },
+    {
+      "code": "U",
+      "name": "Professional and support domains",
+      "id_range": "D374-D390"
+    }
+  ],
+  "families_note": "Family letters and id ranges are read from the poster. Ranges the poster does not render legibly are 'not established' and are not guessed.",
+  "domains": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "family": "A",
+      "index": 1,
+      "subdomains": [
+        "pure",
+        "applied",
+        "algebra",
+        "geometry",
+        "analysis",
+        "topology",
+        "number theory",
+        "logic",
+        "category theory",
+        "probability",
+        "statistics",
+        "optimization",
+        "operations research",
+        "numerical methods"
+      ],
+      "enablement": [
+        "GPU/CPU mathematical-computing workstation",
+        "Jupyter/Julia/Python/Mathematica-style environments",
+        "theorem-proving containers",
+        "Lean/SMT",
+        "symbolic computation",
+        "numerical experimentation",
+        "reproducible notebooks",
+        "formalisation → executable test → evidence pipeline"
+      ],
+      "holy_grail_lab": "Formal Mathematics Lab",
+      "components": [
+        "PANINI",
+        "MEZ"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "family": "A",
+      "index": 2,
+      "subdomains": [
+        "classical mechanics",
+        "electromagnetism",
+        "thermodynamics",
+        "statistical mechanics",
+        "quantum mechanics",
+        "quantum information",
+        "condensed matter",
+        "nuclear",
+        "particle",
+        "plasma",
+        "optics/photonics",
+        "acoustics",
+        "astrophysics",
+        "biophysics"
+      ],
+      "enablement": [
+        "numerical simulation",
+        "scientific Python/C++/Julia",
+        "GPU computing",
+        "symbolic mathematics",
+        "signal acquisition",
+        "sensors",
+        "oscilloscopes",
+        "spectroscopy interfaces",
+        "simulation environments",
+        "FPGA/DAQ interfaces",
+        "robotics/actuation where appropriate"
+      ],
+      "holy_grail_lab": "Computational and Experimental Physics Lab",
+      "components": [
+        "PEDLER",
+        "PRATIK",
+        "zasab",
+        "chakra"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "family": "A",
+      "index": 3,
+      "subdomains": [
+        "organic",
+        "inorganic",
+        "physical",
+        "analytical",
+        "computational",
+        "materials",
+        "polymer",
+        "electrochemistry",
+        "surface",
+        "molecular simulation"
+      ],
+      "enablement": [
+        "molecular modelling",
+        "quantum chemistry",
+        "cheminformatics",
+        "reaction databases",
+        "spectroscopy-data processing",
+        "low-cost sensor interfaces",
+        "simulation",
+        "instrumentation interfaces",
+        "automated experiment logging",
+        "provenance"
+      ],
+      "holy_grail_lab": "Computational Chemistry Lab",
+      "components": [
+        "PRATIK",
+        "zasab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "earth-planetary",
+      "name": "Earth, planetary and atmospheric sciences",
+      "family": "A",
+      "index": 4,
+      "subdomains": [
+        "geology",
+        "geophysics",
+        "geodesy",
+        "GIS",
+        "remote sensing",
+        "hydrology",
+        "oceanography",
+        "meteorology",
+        "climate science",
+        "atmospheric science",
+        "seismology",
+        "volcanology",
+        "planetary science"
+      ],
+      "enablement": [
+        "GIS stack",
+        "satellite-data processing",
+        "geospatial computation",
+        "numerical modelling",
+        "sensor networks",
+        "weather/climate datasets",
+        "simulation",
+        "drone and remote-sensing interfaces",
+        "HPC",
+        "visualization"
+      ],
+      "holy_grail_lab": "Earth Systems Lab",
+      "components": [
+        "chakra",
+        "atlasviz",
+        "ertabat"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "family": "D",
+      "index": 5,
+      "subdomains": [
+        "molecular",
+        "cell",
+        "genetics",
+        "genomics",
+        "microbiology",
+        "zoology",
+        "botany",
+        "evolutionary",
+        "developmental",
+        "systems",
+        "synthetic"
+      ],
+      "enablement": [
+        "bioinformatics",
+        "sequence analysis",
+        "molecular databases",
+        "microscopy pipelines",
+        "image analysis",
+        "computational biology",
+        "instrumentation interfaces",
+        "reproducible experimental records"
+      ],
+      "holy_grail_lab": "Computational Biology Lab",
+      "components": [
+        "PANINI",
+        "PRATIK"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "biotechnology",
+      "name": "Biotechnology",
+      "family": "D",
+      "index": 6,
+      "subdomains": [
+        "genetic engineering",
+        "synthetic biology",
+        "protein engineering",
+        "cell engineering",
+        "tissue engineering",
+        "bioprocessing",
+        "fermentation",
+        "industrial",
+        "agricultural",
+        "environmental"
+      ],
+      "enablement": [
+        "PANINI genetic branch",
+        "genetic IR/CISC/RISC representations",
+        "molecular simulation",
+        "sequence computation",
+        "laboratory automation interfaces",
+        "microscopy",
+        "instrumentation",
+        "experiment and provenance ledger"
+      ],
+      "holy_grail_lab": "Genetic Realization Lab",
+      "components": [
+        "PANINI",
+        "zasab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "neuroscience",
+      "name": "Neuroscience",
+      "family": "D",
+      "index": 7,
+      "subdomains": [
+        "cognitive",
+        "systems",
+        "computational",
+        "neurophysiology",
+        "neuroengineering",
+        "brain imaging",
+        "BCI"
+      ],
+      "enablement": [
+        "EEG/EMG",
+        "physiological sensing",
+        "signal processing",
+        "neural data pipelines",
+        "computational neuroscience",
+        "BCI interfaces",
+        "robotics",
+        "embodied experimentation",
+        "PEDLER and CEM research environments"
+      ],
+      "holy_grail_lab": "Neurocomputational and BCI Lab",
+      "components": [
+        "PEDLER",
+        "zasab",
+        "transeg",
+        "qnbci"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology and behavioural sciences",
+      "family": "F",
+      "index": 8,
+      "subdomains": [
+        "cognitive",
+        "developmental",
+        "social",
+        "comparative",
+        "experimental",
+        "behavioural science",
+        "human factors",
+        "psychometrics",
+        "decision science"
+      ],
+      "enablement": [
+        "experiment platforms",
+        "behavioural measurement",
+        "multimodal observation",
+        "statistical analysis",
+        "computational modelling",
+        "cognitive architectures",
+        "reproducible experiments",
+        "participant and data provenance"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "PEDLER",
+        "MEZ"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "family": "E",
+      "index": 9,
+      "subdomains": [
+        "internal medicine",
+        "surgery",
+        "radiology",
+        "pathology",
+        "oncology",
+        "neurology",
+        "psychiatry",
+        "cardiology",
+        "paediatrics"
+      ],
+      "enablement": [
+        "clinical data environments",
+        "imaging",
+        "physiological sensing",
+        "decision-support research",
+        "simulation",
+        "medical AI",
+        "digital twins",
+        "clinical instrumentation",
+        "secure data environments",
+        "provenance"
+      ],
+      "holy_grail_lab": "Medical AI and Instrumentation Lab",
+      "components": [
+        "PAT.AL",
+        "transeg",
+        "pajr"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "biomedical-eng",
+      "name": "Biomedical engineering",
+      "family": "E",
+      "index": 10,
+      "subdomains": [
+        "medical devices",
+        "biosensors",
+        "prosthetics",
+        "implants",
+        "rehabilitation engineering",
+        "biomedical imaging",
+        "surgical robotics",
+        "computational medicine",
+        "tissue engineering"
+      ],
+      "enablement": [
+        "electronics",
+        "embedded systems",
+        "CAD",
+        "simulation",
+        "sensors",
+        "robotics",
+        "physiological interfaces",
+        "manufacturing",
+        "verification"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "PRATIK",
+        "qnbci"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "public-health",
+      "name": "Public health",
+      "family": "E",
+      "index": 11,
+      "subdomains": [
+        "epidemiology",
+        "health systems",
+        "population health",
+        "environmental health",
+        "health economics",
+        "health informatics",
+        "preventive medicine"
+      ],
+      "enablement": [
+        "statistical computing",
+        "epidemiological modelling",
+        "GIS",
+        "data integration",
+        "simulation",
+        "secure research environments",
+        "public-health dashboards"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "atlasviz",
+        "pajr"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer science",
+      "family": "C",
+      "index": 12,
+      "subdomains": [
+        "algorithms",
+        "programming languages",
+        "operating systems",
+        "distributed systems",
+        "databases",
+        "compilers",
+        "computer architecture",
+        "software engineering",
+        "formal methods",
+        "HCI"
+      ],
+      "enablement": [
+        "complete developer workstation",
+        "compiler and toolchain stack",
+        "containers",
+        "Kubernetes and distributed systems",
+        "databases",
+        "formal verification",
+        "testing",
+        "CI/CD",
+        "observability",
+        "reproducibility"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "PANINI",
+        "ILM",
+        "hindawi",
+        "MEZ"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "artificial-intelligence",
+      "name": "Artificial intelligence",
+      "family": "C",
+      "index": 13,
+      "subdomains": [
+        "machine learning",
+        "deep learning",
+        "reinforcement learning",
+        "generative AI",
+        "multimodal AI",
+        "AI agents",
+        "cognitive architectures",
+        "AGI research",
+        "AI safety and alignment",
+        "AI evaluation"
+      ],
+      "enablement": [
+        "GPU workstation",
+        "CUDA/ROCm",
+        "model-serving stack",
+        "local inference",
+        "training environments",
+        "evaluation harnesses",
+        "agent runtimes",
+        "PEDLER",
+        "GENIE",
+        "provenance",
+        "experiment tracking"
+      ],
+      "holy_grail_lab": "Local AGI Research Lab",
+      "components": [
+        "PEDLER",
+        "GENIE",
+        "PANINI",
+        "MEZ"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics and autonomous systems",
+      "family": "B",
+      "index": 14,
+      "subdomains": [
+        "industrial robotics",
+        "mobile robotics",
+        "humanoids",
+        "drones",
+        "autonomous vehicles",
+        "manipulation",
+        "navigation",
+        "SLAM",
+        "robot perception",
+        "multi-agent systems"
+      ],
+      "enablement": [
+        "ROS/ROS2",
+        "simulation",
+        "computer vision",
+        "embedded compute",
+        "motor control",
+        "sensors",
+        "cameras",
+        "actuators",
+        "digital twins",
+        "physical robots",
+        "local and HPC computation"
+      ],
+      "holy_grail_lab": "Autonomous Systems Lab",
+      "components": [
+        "zasab",
+        "pench",
+        "transeg",
+        "PRATIK"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "hpc",
+      "name": "High-performance computing",
+      "family": "C",
+      "index": 15,
+      "subdomains": [
+        "parallel computing",
+        "GPU computing",
+        "distributed computing",
+        "scientific computing",
+        "numerical simulation",
+        "HPC architecture",
+        "AI infrastructure"
+      ],
+      "enablement": [
+        "GPU nodes",
+        "CPU clusters",
+        "CUDA/ROCm",
+        "MPI",
+        "OpenMP",
+        "distributed storage",
+        "schedulers",
+        "containerized HPC",
+        "benchmarking",
+        "reproducible workloads"
+      ],
+      "holy_grail_lab": "Distributed Intelligence Lab",
+      "components": [
+        "PRATIK",
+        "MEZ"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "family": "C",
+      "index": 16,
+      "subdomains": [
+        "network security",
+        "systems security",
+        "application security",
+        "cryptography",
+        "hardware security",
+        "privacy engineering",
+        "digital forensics",
+        "security operations"
+      ],
+      "enablement": [
+        "isolated cyber ranges",
+        "virtual networks",
+        "containers and VMs",
+        "hardware security experimentation",
+        "logging",
+        "packet analysis",
+        "cryptographic libraries",
+        "reproducible security experiments"
+      ],
+      "holy_grail_lab": "Cyber Range Lab",
+      "components": [
+        "candor",
+        "tok-doi",
+        "spiguard"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "communications",
+      "name": "Communications and networking",
+      "family": "C",
+      "index": 17,
+      "subdomains": [
+        "computer networks",
+        "wireless",
+        "5G/6G",
+        "optical communication",
+        "satellite communication",
+        "internet architecture",
+        "network science",
+        "distributed communication"
+      ],
+      "enablement": [
+        "SDR",
+        "network emulation",
+        "routers and switches",
+        "wireless experimentation",
+        "packet capture",
+        "distributed systems",
+        "edge computing",
+        "satellite-data interfaces"
+      ],
+      "holy_grail_lab": "Space and Link Systems Lab",
+      "components": [
+        "ertabat",
+        "chakra",
+        "zasab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "electrical-eng",
+      "name": "Electrical and electronic engineering",
+      "family": "B",
+      "index": 18,
+      "subdomains": [
+        "electronics",
+        "digital systems",
+        "analog systems",
+        "power electronics",
+        "embedded systems",
+        "FPGA",
+        "ASIC",
+        "instrumentation",
+        "control"
+      ],
+      "enablement": [
+        "PCB tools",
+        "microcontrollers",
+        "FPGA",
+        "oscilloscopes",
+        "logic analysers",
+        "power electronics",
+        "embedded Linux",
+        "simulation",
+        "automated testing"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "zamin",
+        "PRATIK"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "mechanical-eng",
+      "name": "Mechanical engineering",
+      "family": "B",
+      "index": 19,
+      "subdomains": [
+        "mechanics",
+        "CAD/CAE",
+        "dynamics",
+        "thermofluids",
+        "mechatronics",
+        "manufacturing",
+        "robotics",
+        "tribology"
+      ],
+      "enablement": [
+        "CAD",
+        "finite-element analysis",
+        "computational mechanics",
+        "3D printing",
+        "CNC",
+        "sensors",
+        "actuators",
+        "robotics",
+        "machine vision"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "pench"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "chemical-eng",
+      "name": "Chemical engineering",
+      "family": "B",
+      "index": 20,
+      "subdomains": [
+        "process engineering",
+        "reaction engineering",
+        "process control",
+        "petrochemical",
+        "energy processes",
+        "bioprocessing",
+        "materials processing"
+      ],
+      "enablement": [
+        "process simulation",
+        "control systems",
+        "sensors",
+        "digital twins",
+        "process-data analysis",
+        "optimization",
+        "instrumentation"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "PRATIK"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "materials-science",
+      "name": "Materials science",
+      "family": "B",
+      "index": 21,
+      "subdomains": [
+        "metals",
+        "ceramics",
+        "polymers",
+        "composites",
+        "semiconductors",
+        "nanomaterials",
+        "biomaterials",
+        "energy materials"
+      ],
+      "enablement": [
+        "molecular simulation",
+        "materials databases",
+        "microscopy",
+        "spectroscopy",
+        "mechanical testing",
+        "additive manufacturing",
+        "materials informatics"
+      ],
+      "holy_grail_lab": "Materials Informatics Lab",
+      "components": [
+        "PRATIK"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "civil-eng",
+      "name": "Civil and infrastructure engineering",
+      "family": "H",
+      "index": 22,
+      "subdomains": [
+        "structures",
+        "transportation",
+        "geotechnical",
+        "hydraulics",
+        "construction",
+        "smart infrastructure",
+        "urban systems"
+      ],
+      "enablement": [
+        "structural simulation",
+        "GIS",
+        "BIM",
+        "sensors",
+        "drones",
+        "digital twins",
+        "structural monitoring",
+        "optimization"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "atlasviz"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "aerospace",
+      "name": "Aerospace engineering",
+      "family": "B",
+      "index": 23,
+      "subdomains": [
+        "aircraft",
+        "spacecraft",
+        "propulsion",
+        "guidance navigation and control",
+        "orbital mechanics",
+        "space systems",
+        "remote sensing"
+      ],
+      "enablement": [
+        "simulation",
+        "flight dynamics",
+        "hardware-in-loop",
+        "embedded systems",
+        "sensors",
+        "RF",
+        "robotics",
+        "satellite-data processing",
+        "HPC"
+      ],
+      "holy_grail_lab": "Space Systems Lab",
+      "components": [
+        "ertabat",
+        "chakra",
+        "zasab",
+        "rayman"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "energy",
+      "name": "Energy engineering",
+      "family": "N",
+      "index": 24,
+      "subdomains": [
+        "power systems",
+        "solar",
+        "wind",
+        "nuclear",
+        "hydrogen",
+        "batteries",
+        "fuel cells",
+        "grid engineering",
+        "energy storage"
+      ],
+      "enablement": [
+        "power electronics",
+        "grid simulation",
+        "battery testing",
+        "sensor systems",
+        "energy modelling",
+        "optimization",
+        "control systems",
+        "physical experimentation"
+      ],
+      "holy_grail_lab": "Energy Systems Lab",
+      "components": [
+        "zasab",
+        "zamin"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "family": "B",
+      "index": 25,
+      "subdomains": [
+        "CNC",
+        "additive manufacturing",
+        "industrial automation",
+        "production engineering",
+        "quality engineering",
+        "metrology",
+        "factory automation"
+      ],
+      "enablement": [
+        "CAD/CAM",
+        "3D printing",
+        "CNC",
+        "robotic cells",
+        "machine vision",
+        "metrology",
+        "digital manufacturing",
+        "process monitoring"
+      ],
+      "holy_grail_lab": "Digital Manufacturing Lab",
+      "components": [
+        "zasab",
+        "pench"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "semiconductors",
+      "name": "Semiconductor and microelectronics",
+      "family": "B",
+      "index": 26,
+      "subdomains": [
+        "semiconductor physics",
+        "IC design",
+        "FPGA",
+        "ASIC",
+        "packaging",
+        "embedded systems",
+        "MEMS"
+      ],
+      "enablement": [
+        "EDA",
+        "FPGA boards",
+        "embedded Linux",
+        "simulation",
+        "hardware validation",
+        "PCB fabrication",
+        "low-cost instrumentation"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zamin",
+        "zasab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "industrial-automation",
+      "name": "Industrial automation and control",
+      "family": "B",
+      "index": 27,
+      "subdomains": [
+        "PLC",
+        "SCADA",
+        "DCS",
+        "motion control",
+        "industrial networking",
+        "digital twins",
+        "process automation"
+      ],
+      "enablement": [
+        "PLC environments",
+        "industrial protocols",
+        "simulated plants",
+        "sensor and actuator rigs",
+        "digital twins",
+        "control theory",
+        "edge computing"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab",
+        "pench",
+        "transeg"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "family": "G",
+      "index": 28,
+      "subdomains": [
+        "agronomy",
+        "crop science",
+        "precision agriculture",
+        "soil science",
+        "agricultural robotics",
+        "plant breeding",
+        "irrigation",
+        "agricultural economics"
+      ],
+      "enablement": [
+        "drones",
+        "multispectral imaging",
+        "IoT sensors",
+        "GIS",
+        "weather stations",
+        "crop models",
+        "robotics",
+        "agricultural digital twins"
+      ],
+      "holy_grail_lab": "Precision Agriculture Lab",
+      "components": [
+        "zasab",
+        "atlasviz",
+        "gramsheel"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "ecology",
+      "name": "Forestry, ecology and biodiversity",
+      "family": "S",
+      "index": 29,
+      "subdomains": [
+        "ecology",
+        "conservation",
+        "wildlife",
+        "forestry",
+        "biodiversity",
+        "ecosystem modelling"
+      ],
+      "enablement": [
+        "remote sensing",
+        "GIS",
+        "environmental sensors",
+        "biodiversity databases",
+        "ecological simulation",
+        "field instrumentation"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "fiza",
+        "atlasviz"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "food-science",
+      "name": "Food science",
+      "family": "G",
+      "index": 30,
+      "subdomains": [
+        "food chemistry",
+        "food microbiology",
+        "processing",
+        "nutrition",
+        "food engineering",
+        "food safety"
+      ],
+      "enablement": [
+        "analytical instrumentation",
+        "process simulation",
+        "sensors",
+        "imaging",
+        "microbiological data systems",
+        "traceability"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "zasab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "environmental-science",
+      "name": "Environmental science",
+      "family": "S",
+      "index": 31,
+      "subdomains": [
+        "pollution",
+        "climate",
+        "water",
+        "air quality",
+        "waste",
+        "environmental monitoring",
+        "sustainability"
+      ],
+      "enablement": [
+        "sensor networks",
+        "GIS",
+        "remote sensing",
+        "environmental modelling",
+        "data infrastructure",
+        "physical measurement"
+      ],
+      "holy_grail_lab": "Climate and Planetary Systems Lab",
+      "components": [
+        "fiza",
+        "zasab",
+        "atlasviz"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "family": "P",
+      "index": 32,
+      "subdomains": [
+        "early childhood",
+        "school",
+        "higher",
+        "vocational",
+        "STEM",
+        "educational technology",
+        "learning sciences",
+        "assessment",
+        "curriculum design"
+      ],
+      "enablement": [
+        "learning platforms",
+        "simulation",
+        "AI tutors",
+        "multimodal educational environments",
+        "local compute",
+        "teacher and researcher workbenches",
+        "curriculum experimentation",
+        "educational analytics"
+      ],
+      "holy_grail_lab": "Learning Systems Lab",
+      "components": [
+        "tarbiyat",
+        "VIDYA",
+        "MEZ",
+        "ILM"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "linguistics",
+      "name": "Linguistics and language technology",
+      "family": "F",
+      "index": 33,
+      "subdomains": [
+        "linguistics",
+        "computational linguistics",
+        "NLP",
+        "phonetics",
+        "morphology",
+        "syntax",
+        "semantics",
+        "pragmatics",
+        "sociolinguistics",
+        "translation",
+        "script technology",
+        "multilingual computing"
+      ],
+      "enablement": [
+        "ILM",
+        "Hindawi",
+        "HPS",
+        "linguistic corpora",
+        "OCR",
+        "speech processing",
+        "translation",
+        "script rendering",
+        "multilingual AI",
+        "computational lexicons"
+      ],
+      "holy_grail_lab": "Multilingual Intelligence Lab",
+      "components": [
+        "ILM",
+        "hindawi",
+        "PANINI",
+        "awaz"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "family": "F",
+      "index": 34,
+      "subdomains": [
+        "epistemology",
+        "metaphysics",
+        "philosophy of mind",
+        "philosophy of science",
+        "ethics",
+        "logic",
+        "philosophy of technology",
+        "political philosophy"
+      ],
+      "enablement": [
+        "formal argument environments",
+        "ontology tools",
+        "formal logic",
+        "theorem proving",
+        "comparative analysis",
+        "provenance",
+        "executable philosophical models"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "paradox",
+        "GENIE"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "history-archaeology",
+      "name": "History and archaeology",
+      "family": "F",
+      "index": 35,
+      "subdomains": [
+        "history",
+        "archaeology",
+        "historical linguistics",
+        "epigraphy",
+        "heritage",
+        "digital humanities"
+      ],
+      "enablement": [
+        "OCR",
+        "manuscript processing",
+        "GIS",
+        "3D reconstruction",
+        "databases",
+        "language and script tools",
+        "digital preservation",
+        "provenance"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "ILM",
+        "kitab",
+        "yadein"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "arts-media",
+      "name": "Arts, media and creative technology",
+      "family": "Q",
+      "index": 36,
+      "subdomains": [
+        "literature",
+        "music",
+        "film",
+        "theatre",
+        "visual arts",
+        "animation",
+        "game design",
+        "digital media"
+      ],
+      "enablement": [
+        "multimodal AI",
+        "text image audio and video engines",
+        "creative orchestration",
+        "ILM and Hindawi",
+        "collaborative production",
+        "local GPU workstations",
+        "rendering",
+        "publishing"
+      ],
+      "holy_grail_lab": "Human-AI Creative Lab",
+      "components": [
+        "matba",
+        "khwab",
+        "awaz",
+        "tilasm",
+        "kitab",
+        "aab"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology and anthropology",
+      "family": "F",
+      "index": 37,
+      "subdomains": [
+        "sociology",
+        "anthropology",
+        "cultural anthropology",
+        "social networks",
+        "population studies",
+        "institutional studies",
+        "development studies"
+      ],
+      "enablement": [
+        "survey systems",
+        "qualitative-analysis environments",
+        "network analysis",
+        "statistical computing",
+        "GIS",
+        "simulation",
+        "ethnographic data management",
+        "provenance"
+      ],
+      "holy_grail_lab": "Computational Society Lab",
+      "components": [
+        "atlasviz",
+        "yadein"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "family": "F",
+      "index": 38,
+      "subdomains": [
+        "microeconomics",
+        "macroeconomics",
+        "econometrics",
+        "development economics",
+        "behavioural economics",
+        "computational economics",
+        "financial economics"
+      ],
+      "enablement": [
+        "statistical computing",
+        "econometric environments",
+        "agent-based modelling",
+        "simulation",
+        "optimization",
+        "market-data infrastructure",
+        "reproducible research"
+      ],
+      "holy_grail_lab": "Computational Economics Lab",
+      "components": [
+        "atlasviz"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "business",
+      "name": "Business and management",
+      "family": "U",
+      "index": 39,
+      "subdomains": [
+        "strategy",
+        "operations",
+        "finance",
+        "accounting",
+        "marketing",
+        "supply chains",
+        "entrepreneurship",
+        "organizational science"
+      ],
+      "enablement": [
+        "business simulation",
+        "optimization",
+        "forecasting",
+        "process mining",
+        "decision-support",
+        "enterprise AI",
+        "digital twins",
+        "workflow automation"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "MEZ",
+        "estate"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "law-policy",
+      "name": "Law, governance and public policy",
+      "family": "J",
+      "index": 40,
+      "subdomains": [
+        "constitutional law",
+        "civil law",
+        "criminal law",
+        "technology law",
+        "international law",
+        "regulatory systems",
+        "public administration",
+        "policy analysis"
+      ],
+      "enablement": [
+        "legal corpora",
+        "multilingual legal retrieval",
+        "document analysis",
+        "provenance",
+        "policy simulation",
+        "formal rule systems",
+        "evidence management",
+        "reproducible policy research"
+      ],
+      "holy_grail_lab": "Legal Intelligence Lab",
+      "components": [
+        "vakil",
+        "candor",
+        "proclamation-equity",
+        "humanesque"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "architecture-urban",
+      "name": "Architecture and urban systems",
+      "family": "H",
+      "index": 41,
+      "subdomains": [
+        "architecture",
+        "urban planning",
+        "smart cities",
+        "transportation",
+        "housing",
+        "infrastructure",
+        "urban simulation"
+      ],
+      "enablement": [
+        "CAD/BIM",
+        "GIS",
+        "urban digital twins",
+        "simulation",
+        "environmental sensing",
+        "traffic modelling",
+        "visualization"
+      ],
+      "holy_grail_lab": "Built Environment Lab",
+      "components": [
+        "atlasviz",
+        "zistgah-dome"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "geography",
+      "name": "Geography and spatial systems",
+      "family": "S",
+      "index": 42,
+      "subdomains": [
+        "human geography",
+        "physical geography",
+        "GIS",
+        "geoinformatics",
+        "cartography",
+        "spatial economics"
+      ],
+      "enablement": [
+        "GIS",
+        "remote sensing",
+        "spatial databases",
+        "satellite data",
+        "simulation",
+        "visualization"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "atlasviz",
+        "chakra"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability and planetary systems",
+      "family": "S",
+      "index": 43,
+      "subdomains": [
+        "sustainability science",
+        "resource systems",
+        "circular economy",
+        "climate adaptation",
+        "ecological economics",
+        "planetary boundaries",
+        "resilience"
+      ],
+      "enablement": [
+        "Earth-system models",
+        "resource simulation",
+        "lifecycle analysis",
+        "energy models",
+        "ecological models",
+        "sensor networks",
+        "scenario analysis"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "fiza",
+        "zamin"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "defence-security",
+      "name": "Defence and security technology",
+      "family": "R",
+      "index": 44,
+      "subdomains": [
+        "aerospace and defence systems",
+        "cybersecurity",
+        "intelligence analysis",
+        "autonomous systems",
+        "sensors",
+        "communications",
+        "simulation"
+      ],
+      "enablement": [
+        "simulation",
+        "secure computing",
+        "sensor fusion",
+        "robotics",
+        "communications",
+        "edge computing",
+        "AI evaluation",
+        "controlled experimental environments"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "ertabat",
+        "zasab",
+        "candor"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "disaster-resilience",
+      "name": "Disaster and resilience engineering",
+      "family": "R",
+      "index": 45,
+      "subdomains": [
+        "disaster management",
+        "emergency response",
+        "infrastructure resilience",
+        "climate resilience",
+        "humanitarian systems"
+      ],
+      "enablement": [
+        "simulation",
+        "GIS",
+        "communications",
+        "robotics",
+        "sensor networks",
+        "decision-support",
+        "distributed computing"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "ertabat",
+        "zasab",
+        "gramsheel"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "hci",
+      "name": "Human-computer interaction",
+      "family": "C",
+      "index": 46,
+      "subdomains": [
+        "HCI",
+        "UX",
+        "human factors",
+        "accessibility",
+        "interaction design",
+        "adaptive interfaces",
+        "multimodal interaction"
+      ],
+      "enablement": [
+        "eye tracking",
+        "gesture",
+        "speech",
+        "vision",
+        "physiological sensing",
+        "XR",
+        "multimodal AI",
+        "usability experiments"
+      ],
+      "holy_grail_lab": "not established",
+      "components": [
+        "tilasm",
+        "MEZ",
+        "transeg"
+      ],
+      "lab_profile": "workstation",
+      "state": "not_built"
+    },
+    {
+      "id": "bioinformatics",
+      "name": "Bioinformatics",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "biology × computing × mathematics × statistics",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "computational-neuroscience",
+      "name": "Computational neuroscience",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "neuroscience × mathematics × computing × AI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "neuroengineering",
+      "name": "Neuroengineering",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "neuroscience × electronics × biomedical engineering × robotics",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "quantum-computing",
+      "name": "Quantum computing and information",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "physics × mathematics × computer science × engineering",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "quantum-neuromorphic",
+      "name": "Quantum and neuromorphic systems",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "physics × neuroscience × computer architecture × electronics × AI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "computational-chemistry",
+      "name": "Computational chemistry",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "chemistry × physics × mathematics × computing",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "materials-informatics",
+      "name": "Materials informatics",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "materials science × chemistry × physics × AI/HPC",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "computational-medicine",
+      "name": "Computational medicine",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "medicine × biology × statistics × AI × HPC",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "medical-ai",
+      "name": "Medical AI",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "medicine × imaging × neuroscience × computing × AI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "robotics-ai",
+      "name": "Robotics and AI",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "AI × control × mechanical engineering × electronics × perception",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "cyber-physical",
+      "name": "Cyber-physical systems",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "computing × electronics × control × mechanical engineering",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "digital-twins",
+      "name": "Digital twins",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "engineering × simulation × sensing × computing × operations",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "computational-social-science",
+      "name": "Computational social science",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "social science × statistics × networks × computing × AI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "digital-humanities",
+      "name": "Digital humanities",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "humanities × linguistics × computing × AI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "earth-system-modelling",
+      "name": "Climate and earth-system modelling",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "physics × earth science × mathematics × HPC × environmental science",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "space-systems",
+      "name": "Space systems",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "physics × aerospace × computing × communications × robotics",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "human-augmentation",
+      "name": "Human augmentation",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "neuroscience × biomedical engineering × AI × robotics × HCI",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "synthetic-biology",
+      "name": "Synthetic biology",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "biology × genetics × chemistry × engineering × computing",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "autonomous-experimentation",
+      "name": "Autonomous scientific experimentation",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "AI × robotics × laboratory automation × domain science × instrumentation",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    },
+    {
+      "id": "science-of-science",
+      "name": "Science of science and research engineering",
+      "family": "X",
+      "index": null,
+      "subdomains": [],
+      "enablement": [],
+      "holy_grail_lab": "not established",
+      "components": [],
+      "crossing": "science × data science × knowledge systems × AI × provenance",
+      "lab_profile": "composed",
+      "state": "not_built",
+      "note": "a cross-domain community, composed from the labs of the domains it crosses. It is not an ontology position and gets no lab of its own."
+    }
+  ]
+}

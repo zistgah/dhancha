@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dhancha domain descriptor",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "script",
+    "gloss",
+    "fakir",
+    "interface",
+    "registry",
+    "implementations",
+    "ports",
+    "conformance",
+    "verbs",
+    "attachment_points",
+    "state",
+    "correlates"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "script": {
+      "type": "string",
+      "description": "the name in its own script"
+    },
+    "gloss": {
+      "type": "string",
+      "description": "what the name means"
+    },
+    "fakir": {
+      "type": "object",
+      "required": [
+        "isic",
+        "isco",
+        "isced",
+        "agi_layers"
+      ],
+      "properties": {
+        "isic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isco": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isced": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agi_layers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ilm_languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "interface": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "implementations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "must contain mock and template (D3)"
+    },
+    "conformance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "condition",
+          "criterion",
+          "unit"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "criterion": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verbs": {
+      "type": "string"
+    },
+    "attachment_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state": {
+      "enum": [
+        "built",
+        "wired_unproven",
+        "not_built"
+      ]
+    },
+    "distinctive_nouns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "words that belong to THIS domain and must not appear in another (D9)"
+    },
+    "correlates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "with",
+          "kind",
+          "shared"
+        ],
+        "properties": {
+          "with": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "shares_primitive",
+              "consumes",
+              "supplies",
+              "co_located",
+              "same_lattice_point",
+              "mounts_in"
+            ]
+          },
+          "shared": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

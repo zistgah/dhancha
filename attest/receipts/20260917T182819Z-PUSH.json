@@ -1,0 +1,12 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicateType": "https://project-ilm.org/attestations/candor/v1",
+  "subject": [{"name": "zistgah/dhancha", "digest": {}}],
+  "predicate": {
+    "action": "PUSH",
+    "note": "no commit existed when this intent was sealed; the countersign receipt names it",
+    "reason": "seed",
+    "utc": "20260917T182819Z",
+    "host": "ilm01-lin"
+  }
+}

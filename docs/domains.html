@@ -1,0 +1,47 @@
+<!doctype html><meta charset="utf-8"><title>collaborator domains</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+:root{--ink:#e9e4d8;--dim:#8d99a8;--bg:#0b0e13;--pan:#11161e;--line:#222c38;--hot:#c9a45c;--ok:#57c8a0;--ne:#c2803c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 ui-monospace,Menlo,Consolas,monospace}
+.wrap{max-width:70rem;margin:0 auto;padding:2rem 1.1rem 5rem}
+h1{font-size:1.7rem;letter-spacing:.04em;margin:0 0 .2rem}
+h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;color:var(--hot);font-weight:400;margin:2.4rem 0 .6rem;border-bottom:1px solid var(--line);padding-bottom:.4rem}
+p{max-width:52rem}.dim{color:var(--dim)}.ne{color:var(--ne)}
+nav a{color:var(--hot);text-decoration:none;margin-right:1.2rem;font-size:.85rem}
+nav{margin:.8rem 0 1.4rem}
+table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.86rem}
+td,th{border-bottom:1px solid var(--line);padding:.42rem .5rem;text-align:left;vertical-align:top}
+th{color:var(--hot);font-weight:400;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em}
+.card{background:var(--pan);border:1px solid var(--line);border-radius:3px;padding:.9rem 1rem;margin:.5rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.7rem}
+.layer{display:flex;gap:.7rem;align-items:baseline;border-bottom:1px solid var(--line);padding:.4rem 0}
+.layer b{color:var(--hot);min-width:4.5rem;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:1rem}
+.gal a{display:block;color:var(--ink);text-decoration:none;font-size:.8rem}
+.gal img{width:100%;border:1px solid var(--line);border-radius:2px;display:block;margin-bottom:.35rem}
+.flow{font-size:.84rem;color:var(--dim);line-height:2.1}
+.flow span{background:var(--pan);border:1px solid var(--line);padding:.2rem .5rem;border-radius:2px;color:var(--ink)}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--dim);font-size:.8rem}
+code{color:var(--hot)}
+</style><div class="wrap"><h1>collaborator domains</h1><p class="dim">66 enumerated &middot; <span class="ne">344 of the declared 390 not yet named</span></p><nav><a href="index.html">spine</a><a href="domains.html">domains</a>
+<a href="labs.html">labs</a><a href="posters.html">posters</a>
+<a href="corpus.html">corpus</a></nav><div class="card dim">The total is DECLARED in the corpus; the names of the remainder are not. They are left unenumerated rather than invented to make the number come out. Each is added when the corpus, or a collaborator, actually names it.</div><h2>families</h2><table><tr><th>code</th><th>family</th><th>ids</th></tr><tr><td>A</td><td>Natural sciences</td><td>D001-D007</td></tr><tr><td>B</td><td>Engineering and technology</td><td>D008-D045</td></tr><tr><td>C</td><td>Computing and digital technology</td><td>D046-D074</td></tr><tr><td>D</td><td>Life sciences and bioengineering</td><td>D075-D100</td></tr><tr><td>E</td><td>Medicine and healthcare</td><td>D101-D122</td></tr><tr><td>F</td><td>Social sciences</td><td>D123-D148</td></tr><tr><td>G</td><td>Agriculture, food and biosciences</td><td>D149-D156</td></tr><tr><td>H</td><td>Architecture, built environment and cities</td><td>D157-D169</td></tr><tr><td>I</td><td>Education and human development</td><td class="ne">not established</td></tr><tr><td>J</td><td>Law, policy and regulation</td><td>D205-D221</td></tr><tr><td>N</td><td>Energy and resources</td><td>D270-D284</td></tr><tr><td>P</td><td>Education and mobility</td><td>D301-D313</td></tr><tr><td>Q</td><td>Media, arts and creative industries</td><td>D314-D329</td></tr><tr><td>R</td><td>Government, civil society and public systems</td><td>D330-D344</td></tr><tr><td>S</td><td>Environment, climate and planetary systems</td><td>D345-D358</td></tr><tr><td>U</td><td>Professional and support domains</td><td>D374-D390</td></tr></table><h2>how each domain is enabled</h2><p class="dim">The enablement list belongs to the domain. It is not boilerplate, and a component with no named task in a domain is not installed in that domain&rsquo;s lab.</p><table id="dt"><tr><th>domain</th><th>family</th><th>enabled with</th><th>Holy Grail lab</th></tr></table><p class="dim" id="dnote"></p><script>
+fetch('registry.json').then(r=>r.json()).then(reg=>{
+  const t=document.getElementById('dt'),fam={};
+  reg.families.forEach(f=>fam[f.code]=f.name);
+  reg.domains.forEach(d=>{
+    const en=(d.enablement.length?d.enablement:(d.crossing?[d.crossing]:['not established']))
+      .map(x=>'<div>'+x+'</div>').join('');
+    const lab=d.holy_grail_lab==='not established'
+      ? '<span class="ne">not established</span>' : d.holy_grail_lab;
+    t.insertAdjacentHTML('beforeend',
+      `<tr><td><b>${d.name}</b><div class="dim">${d.subdomains.join(' · ')||''}</div></td>
+       <td class="dim">${fam[d.family]||d.family}</td>
+       <td class="dim">${en}</td><td>${lab}</td></tr>`);
+  });
+  document.getElementById('dnote').textContent =
+    reg.domains.length+' domains rendered from the registry. '+
+    reg.unenumerated+' of the declared '+reg.declared_total+' are not named here.';
+}).catch(()=>{document.getElementById('dnote').textContent=
+ 'registry.json could not be read from this page. The map is NOT empty — it is unread. '+
+ 'Nothing is claimed about the domains.';});
+</script><footer>dhancha — the domain spine. &copy; 1993&ndash;2026 Abhishek Choudhary. All rights reserved. AyeAI.<br>Retrieve, don't reconstruct. Where the corpus does not establish a relationship, it is not inferred.</footer></div>

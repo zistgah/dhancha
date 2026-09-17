@@ -1,0 +1,34 @@
+{
+  "id": "example",
+  "name": "",
+  "script": "",
+  "gloss": "",
+  "fakir": {
+    "isic": [],
+    "isco": [],
+    "isced": [],
+    "agi_layers": [],
+    "ilm_languages": []
+  },
+  "interface": "include/example_hal.h",
+  "registry": "src/registry.c",
+  "implementations": [],
+  "ports": [
+    "mock",
+    "template"
+  ],
+  "conformance": [
+    {
+      "id": "EX-C1",
+      "condition": "not established",
+      "criterion": "not established",
+      "unit": "not established",
+      "unit_ucum": "not established"
+    }
+  ],
+  "verbs": "skills/verbs.json",
+  "attachment_points": [],
+  "state": "not_built",
+  "distinctive_nouns": [],
+  "correlates": []
+}

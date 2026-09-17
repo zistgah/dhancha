@@ -1,0 +1,63 @@
+{
+  "domain": "dhancha",
+  "verbs": [
+    {
+      "verb": "validate",
+      "args": [
+        "descriptor",
+        "repo?"
+      ],
+      "returns": "conformance report",
+      "preconditions": [
+        "descriptor exists"
+      ]
+    },
+    {
+      "verb": "leak",
+      "args": [
+        "descriptors[]",
+        "prose_dir?"
+      ],
+      "returns": "leak report",
+      "preconditions": [
+        "at least one descriptor"
+      ]
+    },
+    {
+      "verb": "correlate",
+      "args": [
+        "descriptors[]",
+        "out?"
+      ],
+      "returns": "graph",
+      "preconditions": [
+        "correlations declared at both ends for shares_primitive"
+      ]
+    },
+    {
+      "verb": "instantiate",
+      "args": [
+        "descriptor",
+        "out"
+      ],
+      "returns": "skeleton tree",
+      "preconditions": [
+        "descriptor validates"
+      ]
+    },
+    {
+      "verb": "seed_from_lattice",
+      "args": [
+        "isic",
+        "isco",
+        "isced",
+        "id",
+        "name"
+      ],
+      "returns": "descriptor stub",
+      "preconditions": [
+        "lattice code is real"
+      ]
+    }
+  ]
+}
