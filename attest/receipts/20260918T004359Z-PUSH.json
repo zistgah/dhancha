@@ -1,0 +1,11 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicateType": "https://project-ilm.org/attestations/candor/v1",
+  "subject": [{"name": "zistgah/dhancha", "digest": {"gitCommit": "605fcf9dfb746067f345fadfc7e7ed03ea6121b7"}}],
+  "predicate": {
+    "action": "PUSH",
+    "reason": "correct",
+    "utc": "20260918T004359Z",
+    "host": "ilm01-lin"
+  }
+}
