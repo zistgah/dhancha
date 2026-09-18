@@ -1,0 +1,16 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicateType": "https://project-ilm.org/attestations/candor/v1",
+  "subject": [{"name": "zistgah/dhancha", "digest": {"gitCommit": "8d745bcdf6bb6604e52763e23ff18c1cdfa6e66b"}}],
+  "predicate": {
+    "action": "MINT",
+    "reason": "seed",
+    "doi": "10.5281/zenodo.22821645",
+    "utc": "20260918T004431Z",
+    "host": "ilm01-lin",
+    "author_verified": true,
+    "author_verified_note": "the operator typed the gate after reading the deposited metadata",
+    "findings_allowed": false,
+    "tool": "misty-doi 1.0.0"
+  }
+}

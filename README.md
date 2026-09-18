@@ -42,3 +42,5 @@ mapping from the rung ladder. Adopting a standard is not the same as being certi
     make check
 
 Stdlib Python 3 only. No pip, no network, no key.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22821645.svg)](https://doi.org/10.5281/zenodo.22821645)

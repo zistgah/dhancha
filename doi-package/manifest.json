@@ -1,0 +1,32 @@
+{
+  "title": "dhancha — the domain spine for FAKIR",
+  "version": "0.1.0",
+  "doi": null,
+  "license": "Apache-2.0",
+  "artifacts": [
+    {
+      "name": "dhancha-0.1.0-8d745bcdf6bb6604e52763e23ff18c1cdfa6e66b.tar.gz",
+      "size": 4788134,
+      "sha256": "35b5db138043b1c2fde2059e172dfedd9856c6559fbd66d81bedbac871499cfa"
+    },
+    {
+      "name": "CITATION.cff",
+      "size": 332,
+      "sha256": "9f0faea5f84f5d8ce6fbda92732d78074f386f112720c5cef36dc584b4ad145f"
+    }
+  ],
+  "metadata_files": [
+    "metadata.json",
+    "zenodo.json",
+    "datacite.json",
+    "codemeta.json",
+    "CITATION.cff"
+  ],
+  "reproducibility": {
+    "checksums": {
+      "dhancha-0.1.0-8d745bcdf6bb6604e52763e23ff18c1cdfa6e66b.tar.gz": "35b5db138043b1c2fde2059e172dfedd9856c6559fbd66d81bedbac871499cfa",
+      "CITATION.cff": "9f0faea5f84f5d8ce6fbda92732d78074f386f112720c5cef36dc584b4ad145f"
+    },
+    "tool": "misty-doi"
+  }
+}

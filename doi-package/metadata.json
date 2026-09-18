@@ -1,0 +1,36 @@
+{
+  "title": "dhancha — the domain spine for FAKIR",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "description": "The domain-invariant skeleton every FAKIR domain is built on: ten invariants, five extracted primitives, a machine-readable domain descriptor, a validator, a cross-domain vocabulary leak check, a correlation graph, the collaborator domain registry with per-domain dockerised lab kits and Holy Grail lab pattern, and PANINI cycler configuration so the work can be done by any model. Emits CycloneDX (ECMA-424), Development Containers, RO-Crate and UCUM rather than inventing equivalents.",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Choudhary, Abhishek",
+      "affiliation": "AyeAI",
+      "orcid": "0009-0002-0684-8320"
+    }
+  ],
+  "keywords": [
+    "FAKIR",
+    "UKOP",
+    "software architecture",
+    "domain modelling",
+    "conformance",
+    "reproducible research",
+    "CycloneDX",
+    "RO-Crate",
+    "Zistgah"
+  ],
+  "programming_language": "Python",
+  "repository": "https://github.com/zistgah/dhancha",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/zistgah/dhancha/tree/8d745bcdf6bb6604e52763e23ff18c1cdfa6e66b",
+      "scheme": "url"
+    }
+  ]
+}

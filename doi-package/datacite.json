@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "http://datacite.org/schema/kernel-4",
+  "types": {
+    "resourceTypeGeneral": "Software",
+    "resourceType": "software"
+  },
+  "titles": [
+    {
+      "title": "dhancha — the domain spine for FAKIR"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Choudhary, Abhishek",
+      "nameType": "Personal",
+      "givenName": "Abhishek",
+      "familyName": "Choudhary",
+      "affiliation": [
+        {
+          "name": "AyeAI"
+        }
+      ],
+      "nameIdentifiers": [
+        {
+          "nameIdentifier": "https://orcid.org/0009-0002-0684-8320",
+          "nameIdentifierScheme": "ORCID",
+          "schemeUri": "https://orcid.org"
+        }
+      ]
+    }
+  ],
+  "publisher": "Zenodo",
+  "publicationYear": "2026",
+  "subjects": [
+    {
+      "subject": "FAKIR"
+    },
+    {
+      "subject": "UKOP"
+    },
+    {
+      "subject": "software architecture"
+    },
+    {
+      "subject": "domain modelling"
+    },
+    {
+      "subject": "conformance"
+    },
+    {
+      "subject": "reproducible research"
+    },
+    {
+      "subject": "CycloneDX"
+    },
+    {
+      "subject": "RO-Crate"
+    },
+    {
+      "subject": "Zistgah"
+    }
+  ],
+  "version": "0.1.0",
+  "descriptions": [
+    {
+      "description": "The domain-invariant skeleton every FAKIR domain is built on: ten invariants, five extracted primitives, a machine-readable domain descriptor, a validator, a cross-domain vocabulary leak check, a correlation graph, the collaborator domain registry with per-domain dockerised lab kits and Holy Grail lab pattern, and PANINI cycler configuration so the work can be done by any model. Emits CycloneDX (ECMA-424), Development Containers, RO-Crate and UCUM rather than inventing equivalents.",
+      "descriptionType": "Abstract"
+    }
+  ],
+  "rightsList": [
+    {
+      "rights": "Apache-2.0",
+      "rightsIdentifier": "Apache-2.0",
+      "rightsIdentifierScheme": "SPDX"
+    }
+  ],
+  "language": "eng",
+  "relatedIdentifiers": [
+    {
+      "relatedIdentifier": "https://github.com/zistgah/dhancha/tree/8d745bcdf6bb6604e52763e23ff18c1cdfa6e66b",
+      "relationType": "IsSupplementTo",
+      "relatedIdentifierType": "URL"
+    }
+  ]
+}
